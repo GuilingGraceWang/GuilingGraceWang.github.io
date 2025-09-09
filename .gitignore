@@ -1,0 +1,16 @@
+# Ignore common operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore build artifacts
+build/
+dist/
+*.o
+*.pyc
+
+# Ignore node modules for Node.js projects
+node_modules/
+
+# Ignore sensitive configuration files
+.env
+config.local.js
