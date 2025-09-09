@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://web.njit.edu/~gwang/CS677.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>DS677-001: Deep Learning - Fall 2024</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+<style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.enable_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.enable_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.enable_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.enable_copy_btns_btn:hover{opacity:.8}.enable_copy_btns_btn:active{opacity:1}</style><style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><style type="text/css">.___Latex___1nfc2_1 ._latex_1nfc2_1 {
+  font: inherit
+}
+</style></head>
+<body inmaintabuse="1">
+    <h1>DS677-001: Deep Learning</h1>
+    <p>Fall 2024</p>
+    <p><strong>Instructor:</strong> Dr. Grace Guiling Wang</p>
+    <p><strong>Textbook:</strong> No textbook.</p>
+    
+    <h2>Topics</h2>
+    
+    <table>
+    <tbody><tr>
+        <th style="text-align: left;">Date</th>
+        <th style="text-align: left;">Topic</th>
+        <th style="text-align: left;">Programming Assignment</th>
+        <th style="text-align: left;">Competition Winner</th>
+    </tr>
+    <tr>
+        <td style="text-align: left;">9/4</td>
+        <td style="text-align: left;">Introduction and ML Basics</td>
+        <td style="text-align: left;">AI Image Generation (<a href="https://njit.instructure.com/courses/40270/assignments/488059?module_item_id=1516308">Canvas</a>)</td>
+        <td style="text-align: left;"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">9/11</td>
+        <td style="text-align: left;">Deep Learning Basics</td>
+        <td style="text-align: left;">
+            Framewise Phoneme Classification (<a href="https://www.kaggle.com/competitions/ds-677-deep-learning-week-2-hw-1-fall-2024">Kaggle</a>)<br>
+            Gradient Descent Implementation (<a href="https://njit.instructure.com/courses/40270/assignments/493459?module_item_id=1532370">Canvas</a>)
+        </td>
+        <td style="text-align: left;">Fan Yang</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">9/18</td>
+        <td style="text-align: left;">CNN</td>
+        <td style="text-align: left;">Image Classification (<a href="https://www.kaggle.com/competitions/ds-677-deep-learning-hw-4-fall-2024">Kaggle</a>)</td>
+        <td style="text-align: left;">Fan Yang</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">9/25</td>
+        <td style="text-align: left;">GNN</td>
+        <td style="text-align: left;">Graph Neural Networks (<a href="https://www.kaggle.com/competitions/ds-677-deep-learning-week-4-hw-1-fall-2024">Kaggle</a>)</td>
+        <td style="text-align: left;">Anish Panicker</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">10/2</td>
+        <td style="text-align: left;">Attention and Self-Attention</td>
+        <td style="text-align: left;">Speaker Classification (<a href="https://www.kaggle.com/competitions/ds-677-deep-learning-week-5-hw-1-fall-2024">Kaggle</a>)</td>
+        <td style="text-align: left;">Jhilmit Asri</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">10/9</td>
+        <td style="text-align: left;">Transformer and Bert</td>
+        <td style="text-align: left;">Machine Translation (<a href="https://njit.instructure.com/courses/40270/assignments/499283?module_item_id=1546268">Canvas</a>)</td>
+        <td style="text-align: left;">Eugene Langmer</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">10/16</td>
+        <td style="text-align: left;">ChatGT, GAN, AutoEncoder</td>
+        <td style="text-align: left;">Anime Face Generation with GAN (<a href="https://njit.instructure.com/courses/40270/assignments/500596?module_item_id=1549061">Canvas</a>)</td>
+        <td style="text-align: left;">Kiran Mayee Bellam</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">10/23</td>
+        <td style="text-align: left;">Self-supervised Bert</td>
+        <td style="text-align: left;"></td>
+        <td style="text-align: left;"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">10/30</td>
+        <td style="text-align: left;">Midterm (2 hour)</td>
+        <td style="text-align: left;"></td>
+        <td style="text-align: left;"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">11/6</td>
+        <td style="text-align: left;">Auto-Encoder</td>
+        <td style="text-align: left;">Reading Comprehension (<a href="https://www.kaggle.com/competitions/ds-677-deep-learning-week-10-hw-1-fall-2024">Kaggle</a>)</td>
+        <td style="text-align: left;">Sai Srinivas Pedhapolla</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">11/13</td>
+        <td style="text-align: left;">Image Generation</td>
+        <td style="text-align: left;">Anime Face Generation with Diffusion Model (<a href="https://njit.instructure.com/courses/40270/assignments/505892?module_item_id=1561105">Canvas</a>)</td>
+        <td style="text-align: left;"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">11/20</td>
+        <td style="text-align: left;">Adversarial Attack</td>
+        <td style="text-align: left;">Adversarial Attack (<a href="https://njit.instructure.com/courses/40270/assignments/507198?module_item_id=1564217">Canvas</a>)</td>
+        <td style="text-align: left;"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">12/4</td>
+        <td style="text-align: left;">Advanced Reinforcement Learning</td>
+        <td style="text-align: left;"></td>
+        <td style="text-align: left;"></td>
+    </tr>
+    </tbody></table>
+
+
+    <p>* Our programming assignments will take the form of a competition. The best one (i.e., highest accuracy, lowest MSE, highest BLEU, highest AFD rate, etc, depending on the assignments) each week will receive a perfect score of 100 points and a $30 gift card as a reward. All other submissions will be graded on a scale relative to the performance of the winning entry.</p>
+
+    <h2>Group Presentation Topics</h2>
+    <!-- <ol>
+        <li>From GPT-3 to OpenAI-o1 (<a href="https://arxiv.org/pdf/2310.02207.pdf">paper</a>) (Pranav Kowadkar)</li>
+        <li>GPT-4 Turbo (Venkata Seetharam Pendekanti, Pruthvik Shashank Reddy Poreddy)</li>
+        <li>Data Distillation (Niharika Singh, Sara Zumerrah Binte Anwar)</li>
+        <li>Meta Quest 3 vs. Vision Pro (David Salazar, Sandeep Paluru)</li>
+        <li>Meta AI (Michael Luo)</li>
+        <li>PaLM2 (Sajid Hussain)</li>
+        <li>DeepSpeed4Science (Amitha Unithirumala)</li>
+        <li>Altman's Advice: AI Startups Should Not Simply Package OpenAI (<a href="https://ts2.space/en/altmans-advice-ai-startups-should-not-simply-package-openai/#gsc.tab=0">talk</a>)</li>
+        <li>OpenAI's DALL-E and CLIP (Joseph Strizhak, Pratyush Sethi)</li>
+        <li>Differential Privacy for Chatbots (Shashwat Singh)</li>
+        <li>DeepMind's AlphaFold (Ethan Oh)</li>
+    </ol> -->
+
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left; width: 25%;">Topic</th>
+                <th style="text-align: left; width: 25%;">Details</th>
+                <th style="text-align: left; width: 15%;">Group No.</th>
+                <th style="text-align: left; width: 35%;">Members</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;" rowspan="2">World Model? LLM? LVLM?</td>
+                <td style="text-align: left;" rowspan="2">Study evolvement of LLMs. Read book "The Nature of Technology".</td>
+                <td style="text-align: left;">1</td>
+                <td style="text-align: left;">
+                    Jhilmit Asri<br>
+                    Kaivalya Kishor Dixit<br>
+                    Sai Dhiren Musaioji<br>
+                    Srikanth Naidu
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">2</td>
+                <td style="text-align: left;">
+                    Adit Chheda<br>
+                    Harshad Ravindra Hatte<br>
+                    Abhiram Krishnam<br>
+                    Akul Lakha
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;" rowspan="2">From GPT-3 to OpenAI-o1</td>
+                <td style="text-align: left;" rowspan="2">Watch Yann LeCun's presentation at Harvard: Objective-Driven AI: Towards AI
+                    systems that can learn, remember, reason, and plan (<a href="https://www.youtube.com/watch?v=MiqLoAZFRSE">video</a>) </td>
+                <td style="text-align: left;">3</td>
+                <td style="text-align: left;">
+                    Amish Faldu<br>
+                    Shrey Bhupendrabhai Patel<br>
+                    Nimay Gautam Shah<br>
+                    Snehi Pankajbhai Vora
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">5</td>
+                <td style="text-align: left;">
+                    Aayush Chitransh<br>
+                    Haren Doppalapudi<br>
+                    Siddharth Chowdary Kundu<br>
+                    Narmada Peddi
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;" rowspan="2">Unbiased AI, Biased AI</td>
+                <td style="text-align: left;" rowspan="2">Study the topic and also read the book "Noise: A Flaw in Human Judgement" by 
+                    <a href="https://www.amazon.com/stores/Daniel-Kahneman/author/B001ILFNQG?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true">Daniel Kahneman</a></td>
+                <td style="text-align: left;">4</td>
+                <td style="text-align: left;">
+                    Sai Deepak Gundala<br>
+                    Eugene Langmer<br>
+                    Lakshman Palli<br>
+                    Sai Srinivas Pedhapolla
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">6</td>
+                <td style="text-align: left;">
+                    Kiran Mayee Bellam<br>
+                    Mukul Deepak Chokhani<br>
+                    Supriya Ganga<br>
+                    Khadhar Hameed Khan Pathan<br>
+                    Salma Shaik
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Canvas: ChatGPT</td>
+                <td style="text-align: left;">ChatGPT is a powerful tool at the moment, but could it serve as an academic advisor or
+                    teaching assistant, answering all student questions? <br>These questions could include
+                    things like course selection or how to navigate Canvas features.</td>
+                <td style="text-align: left;">7</td>
+                <td style="text-align: left;">
+                    Tianxing Hu<br>
+                    Fan Yang<br>
+                    Kaiheng Zhang<br>
+                    Xuan Zhang
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Oracle</td>
+                <td style="text-align: left;">Read Oracle (ORCL) Q1 2025 Earnings Call Script about Larry Ellison's comments on
+                    AI. What is your opinion?</td>
+                <td style="text-align: left;">8</td>
+                <td style="text-align: left;">
+                    Aadish Jain<br>
+                    Anish Panicker
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;" rowspan="2">Compound AI System</td>
+                <td style="text-align: left;" rowspan="2">An analysis of their current ecosystem, recent advancements, and future challenges.</td>
+                <td style="text-align: left;">9</td>
+                <td style="text-align: left;">
+                    Hariharasudhan Balakrishnan<br>
+                    Vaishnavi Masapalli<br>
+                    Teja Pavan Sai Singampalli
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">10</td>
+                <td style="text-align: left;">Abhijeet Sahdev</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;" >I-XRAY</td>
+                <td style="text-align: left;" >The AI Glasses That Reveal Anyone's Personal Details just from looking at themâ€, what
+                    it is, its effects, and other relevant aspects.</td>
+                <td style="text-align: left;"></td>
+                <td style="text-align: left;"></td>
+            </tr>
+        </tbody>
+    </table>    
+
+    <h2>More Winners:</h2>
+    <ol>
+        <li>Best research project: TBA</li>
+        <li>Biggest improvement: TBA</li>
+        <li>Female Modeler: TBA</li>
+    </ol>
+
+
+<script src="chrome-extension://onepmapfbjohnegdmfhndpefjkppbjkm/sm.bundle.js" data-pname="supercopy-v3" data-asset-path="https://spc4.s3.ap-east-1.amazonaws.com"></script></body><div id="__yetone-openai-translator" style="z-index: 2147483647;"><template shadowrootmode="open"><div></div></template></div></html>
